@@ -5,7 +5,6 @@ SELECT * FROM students;
 SELECT * FROM students
    ORDER BY student_id ASC;
 
-
 --student SQL #3 : select students in desc order_id;
 SELECT * FROM students
    ORDER BY student_id DESC;
@@ -54,3 +53,14 @@ UPDATE students
 SET student_first_name = 'April Beth',
     student_last_name = 'Salapang'
 WHERE student_id = 1;
+
+
+
+--update SQL#12 --update student name a based on id
+UPDATE students
+SET student_first_name = "gabgab",
+    student_last_name = "cachapero"
+WHERE student_id = 2;
+
+
+
