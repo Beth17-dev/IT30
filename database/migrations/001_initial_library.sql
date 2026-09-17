@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS students (
   student_id INT PRIMARY KEY AUTO_INCREMENT,
 
   --Student name
-  student_frist_name VARCHAR(50) NOT NULL,
+  student_first_name VARCHAR(50) NOT NULL,
   student_last_name VARCHAR(50) NOT NUll,
 
   --Student course
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS books (
     --Primary key for the book table
     book_id INT PRIMARY KEY AUTO_INCREMENT,
 
-    -- Bok details
+    -- Book details
     book_title VARCHAR(50) NOT NULL,
     book_author VARCHAR(50) NOT NULL,
     book_category VARCHAR(50) NOT NULL,
