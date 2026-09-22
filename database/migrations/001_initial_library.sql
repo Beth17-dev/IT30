@@ -7,10 +7,10 @@ CREATE TABLE IF NOT EXISTS students (
   student_frist_name VARCHAR(50) NOT NULL,
   student_last_name VARCHAR(50) NOT NUll,
 
-  --Student course
+  -- Student course
   student_course VARCHAR(50) NOT NULL,
 
-  --Student created at timestamp
+  -- Student created at timestamp
   student_created_at TIMESTAMP NOT NULL
     DEFAULT CURRENT_TIMESTAMP
 
@@ -20,10 +20,10 @@ COLLATE=utf8mb4_general_ci;
 
 -- #2 books table
 CREATE TABLE IF NOT EXISTS books (
-    --Primary key for the book table
+    -- Primary key for the book table
     book_id INT PRIMARY KEY AUTO_INCREMENT,
 
-    -- Bok details
+    -- Book details
     book_title VARCHAR(50) NOT NULL,
     book_author VARCHAR(50) NOT NULL,
     book_category VARCHAR(50) NOT NULL,
