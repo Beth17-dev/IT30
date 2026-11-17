@@ -1,27 +1,27 @@
---student SQL#1 : select 1 students
+-- student SQL#1 : select 1 students
 SELECT * FROM students;
 
---student SQL#2 : select students in asc order;
+-- student SQL#2 : select students in asc order;
 SELECT * FROM students
    ORDER BY student_id ASC;
 
---student SQL #3 : select students in desc order_id;
+-- student SQL #3 : select students in desc order_id;
 SELECT * FROM students
    ORDER BY student_id DESC;
 
---student SQL #4 : select students in asc order by last_name;
+-- student SQL #4 : select students in asc order by last_name;
 SELECT * FROM students
    ORDER BY student_last_name ASC;
 
---student SQL #5 : select students in desc order by last_name ;
+-- student SQL #5 : select students in desc order by last_name ;
 SELECT * FROM students
    ORDER BY student_last_name DESC;
 
---student SQL #6: select students in asc order by first_name;
+-- student SQL #6: select students in asc order by first_name;
 SELECT * FROM students
    ORDER BY student_first_name ASC;
 
---student SQL #7 : select students in desc order by first_name ;
+-- student SQL #7 : select students in desc order by first_name ;
 SELECT * FROM students
    ORDER BY student_first_name DESC;
 
@@ -56,7 +56,7 @@ WHERE student_id = 1;
 
 
 
---update SQL#12 --update student name a based on id
+-- update SQL#12 --update student name a based on id
 UPDATE students
 SET student_first_name = "gabgab",
     student_last_name = "cachapero"

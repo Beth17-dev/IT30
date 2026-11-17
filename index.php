@@ -1,7 +1,7 @@
 <?php
 // Database Connection
 $host = 'localhost';
-$db = 'it30b_lab_db';
+$db = 'it30b_db_lab';
 $user = 'root';
 $pass = '';
 $charset = 'utf8mb4';

@@ -4,6 +4,26 @@ $currentSection = $_GET['section'] ?? 'dashboard';
 function navActive($section, $currentSection){
     return $section === $currentSection ? 'active' : '';
 }
+
+// ---------- 1. KPI COUNTS ----------
+$studentCount  = $pdo->query("SELECT COUNT(*) FROM students")->fetchColumn();
+$bookCount     = $pdo->query("SELECT COUNT(*) FROM books")->fetchColumn();
+$totalBorrows  = $pdo->query("SELECT COUNT(*) FROM borrow")->fetchColumn();
+$activeBorrows = $pdo->query("SELECT COUNT(*) FROM borrow WHERE borrow_return_date IS NULL")->fetchColumn();
+
+// ---------- 2. BOOKS BY CATEGORY ----------
+$catStmt = $pdo->query("
+    SELECT book_category, COUNT(*) AS cnt
+    FROM books
+    GROUP BY book_category
+    ORDER BY cnt DESC
+");
+$categories = [];
+$categoryCounts = [];
+while ($row = $catStmt->fetch()) {
+    $categories[]     = $row['book_category'];
+    $categoryCounts[] = (int) $row['cnt'];
+}
 ?>
 
 <!-- Material Icon -->
@@ -26,8 +46,8 @@ function navActive($section, $currentSection){
         display:flex;
         align-items:center;
         gap: 0.5rem;
-        color:#212121
-        margin:0;
+        color:#212121;
+        margin: 0;
     }
 
     .app-header h1 .material-icons{
@@ -106,22 +126,22 @@ function navActive($section, $currentSection){
         <a href="index.php?section=dashboard" class="<?= navActive('dashboard', $currentSection) ?>">
             <span class="material-icons">dashboard</span>
             Dashboard
-        <a/>
+        </a>
 
         <a href="index.php?section=students" class="<?= navActive('students', $currentSection) ?>">
             <span class="material-icons">people</span>
             Students
-        <a/>
+        </a>
 
         <a href="index.php?section=books" class="<?= navActive('books', $currentSection) ?>">
             <span class="material-icons">menu_book</span>
             Books
-        <a/>
+        </a>
 
         <a href="index.php?section=borrow" class="<?= navActive('borrow', $currentSection) ?>">
             <span class="material-icons">swap_horiz</span>
             Borrow
-        <a/>
+        </a>
     </nav>
 
-<header/>
+</header>

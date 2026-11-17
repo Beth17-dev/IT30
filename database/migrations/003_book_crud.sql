@@ -1,4 +1,4 @@
---book SQL#1 : select 1 books
+-- book SQL#1 : select 1 books
 SELECT * FROM books;
 
 -- book SQL#2 : select books in asc order;
@@ -9,27 +9,27 @@ SELECT * FROM books
 SELECT * FROM books
    ORDER BY book_id DESC;
 
---book SQL #4 : select books in asc order by title;
+-- book SQL #4 : select books in asc order by title;
 SELECT * FROM books
    ORDER BY book_title ASC;
 
---book SQL #5 : select books in desc order by title ;
+-- book SQL #5 : select books in desc order by title ;
 SELECT * FROM books
    ORDER BY book_title DESC;
 
---book SQL #6: select books in asc order by book_author;
+-- book SQL #6: select books in asc order by book_author;
 SELECT * FROM books
    ORDER BY book_author ASC;
 
---book SQL #7 : select books in desc order by book_author;
+-- book SQL #7 : select books in desc order by book_author;
 SELECT * FROM books
    ORDER BY book_author DESC;
 
---book SQL #8: select books in asc order by book_category;
+-- book SQL #8: select books in asc order by book_category;
 SELECT * FROM books
    ORDER BY book_category ASC;
 
---book SQL #9 : select books in desc order by book_category;
+-- book SQL #9 : select books in desc order by book_category;
 SELECT * FROM books
    ORDER BY book_category DESC;
 
